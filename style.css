@@ -1,0 +1,103 @@
+:root {
+  --background-color: #6358a3;
+  --accent-color: gold;
+  --text-color: #eae7fa;
+}
+
+body {
+  margin: 0;
+  font-family: "Bebas Neue", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 4px 12px;
+}
+
+.navbar__logo {
+  font-size: 30px;
+  color: var(--color);
+}
+
+.navbar__logo i {
+  color: var(--accent-color);
+}
+
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar__menu li {
+  padding: 4px 12px;
+  font-size: 20px;
+}
+
+.navbar__menu li:hover {
+  background-color: rgba(255, 217, 0, 0.7);
+  border-radius: 4px;
+}
+
+.navbar__icons {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+}
+
+.navbar__icons i {
+  padding: 8px 8px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.navbar__toggleBtn {
+  display: none;
+  color: var(--accent-color);
+  position: absolute;
+  font-size: 25px;
+  right: 12px;
+  top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar__menu li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar__toggleBtn {
+    display: block;
+  }
+
+  .navbar__menu.active,
+  .navbar__icons.active {
+    display: flex;
+  }
+}
